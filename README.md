@@ -40,6 +40,16 @@ coding-challenges/
 
 ---
 
+## 📊 Stats & Badges
+
+![Problems Solved](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Yoni-Berihun/coding-challenges/main/.github/stats/problems.json&style=for-the-badge)
+![Languages](https://img.shields.io/github/languages/top/Yoni-Berihun/coding-challenges?style=for-the-badge)
+![Languages Count](https://img.shields.io/github/languages/count/Yoni-Berihun/coding-challenges?style=for-the-badge)
+![Commit Activity](https://img.shields.io/github/commit-activity/w/Yoni-Berihun/coding-challenges?style=for-the-badge)
+![Last Commit](https://img.shields.io/github/last-commit/Yoni-Berihun/coding-challenges?style=for-the-badge)
+
+---
+
 ## 🎯 Goals
 - Solve problems consistently across platforms and custom sets.  
 - Document **thought process, optimizations, and lessons learned**.  
@@ -61,8 +71,8 @@ coding-challenges/
 ## 📈 Progress Tracker
 | Week       | Problems Solved | Focus Area          |
 |------------|-----------------|---------------------|
-| 2026-W07   |             |     |
-| 2026-W08   |             |   |
+| 2026-W07   | |      |
+| 2026-W08   |               |   |
 | 2026-W09   |                |               |
 
 ---
@@ -81,4 +91,6 @@ coding-challenges/
 
 ---
 
-ed problems count, languages used, or streak badges) that you can embed in your README to visually impress recruiters?
+
+
+👉 Would you like me to also generate a **GitHub profile README snippet with badges** (so recruiters see your stats right on your profile page, not just inside the repo)?
