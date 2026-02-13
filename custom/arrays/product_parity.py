@@ -50,9 +50,9 @@ def function (n,  arr):
 
 
           
-arr= [6, 7, 2]
-n =arr.__len__
-                
-finalvalue= function(n , arr)
+arr = [6, 7, 2]
+n = len(arr)
+
+finalvalue = function(n, arr)
 print(finalvalue)
     
