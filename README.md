@@ -1,14 +1,14 @@
 
 # Coding Challenges 🚀
 
-<p align="center"> <!-- Problems solved (custom JSON badge) --> <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Yoni-Berihun/coding-challenges/main/.github/stats/problems.json&style=for-the-badge" alt="Problems Solved" /> <!-- Languages --> <img src="https://img.shields.io/github/languages/top/Yoni-Berihun/coding-challenges?style=for-the-badge" alt="Top Language" /> <img src="https://img.shields.io/github/languages/count/Yoni-Berihun/coding-challenges?style=for-the-badge" alt="Languages Count" /> <!-- Activity --> <img src="https://img.shields.io/github/commit-activity/w/Yoni-Berihun/coding-challenges?style=for-the-badge" alt="Commit Activity" /> <img src="https://img.shields.io/github/last-commit/Yoni-Berihun/coding-challenges?style=for-the-badge" alt="Last Commit" /> </p>
+<p align="center"> <!-- Problems solved (custom JSON badge) --> <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Yoni-Berihun/coding-challenges/main/.github/stats/problems.json&style=for-the-badge" alt="Problems Solved" />  <!-- Languages --> <img src="https://img.shields.io/github/languages/top/Yoni-Berihun/coding-challenges?style=for-the-badge" alt="Top Language" /> <img src="https://img.shields.io/github/languages/count/Yoni-Berihun/coding-challenges?style=for-the-badge" alt="Languages Count" /> <!-- Activity --> <img src="https://img.shields.io/github/commit-activity/w/Yoni-Berihun/coding-challenges?style=for-the-badge" alt="Commit Activity" /> <img src="https://img.shields.io/github/last-commit/Yoni-Berihun/coding-challenges?style=for-the-badge" alt="Last Commit" /> </p>
 
 Regularly solving coding challenges from **LeetCode**, **HackerRank**, **Codeforces**, and **custom problems**.  
 This repository highlights consistency, growth, and problem‑solving skills with a strong focus on **custom practice sets** to deepen understanding of algorithms and data structures.
 
 ---
 
-## 📂 Repository Structure
+ 📂 Repository Structure
 ```
 coding-challenges/
 │
