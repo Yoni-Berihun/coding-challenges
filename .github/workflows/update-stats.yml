@@ -1,5 +1,7 @@
 name: Update Stats Badges
 
+permissions:
+  contents: write 
 on:
   push:
     branches: [ main ]
@@ -24,5 +26,5 @@ jobs:
           git config --global user.name "github-actions"
           git config --global user.email "actions@github.com"
           git add .github/stats/problems.json
-          git commit -m "Update problems solved badge"
+          git commit -m "Update problems solved badge" || echo "No changes to commit"
           git push
