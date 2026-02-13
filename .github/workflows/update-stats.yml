@@ -1,0 +1,28 @@
+name: Update Stats Badges
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: "0 0 * * 0" # runs weekly
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Count problems
+        run: |
+          PROBLEMS=$(find custom leetcode hackerrank codeforces -type f | wc -l)
+          mkdir -p .github/stats
+          echo "{ \"schemaVersion\": 1, \"label\": \"Problems Solved\", \"message\": \"$PROBLEMS\", \"color\": \"blue\" }" > .github/stats/problems.json
+
+      - name: Commit stats
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+          git add .github/stats/problems.json
+          git commit -m "Update problems solved badge"
+          git push
