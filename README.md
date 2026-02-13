@@ -1,6 +1,8 @@
 
 # Coding Challenges 🚀
 
+<p align="center"> <!-- Problems solved (custom JSON badge) --> <img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Yoni-Berihun/coding-challenges/main/.github/stats/problems.json&style=for-the-badge" alt="Problems Solved" /> <!-- Languages --> <img src="https://img.shields.io/github/languages/top/Yoni-Berihun/coding-challenges?style=for-the-badge" alt="Top Language" /> <img src="https://img.shields.io/github/languages/count/Yoni-Berihun/coding-challenges?style=for-the-badge" alt="Languages Count" /> <!-- Activity --> <img src="https://img.shields.io/github/commit-activity/w/Yoni-Berihun/coding-challenges?style=for-the-badge" alt="Commit Activity" /> <img src="https://img.shields.io/github/last-commit/Yoni-Berihun/coding-challenges?style=for-the-badge" alt="Last Commit" /> </p>
+
 Regularly solving coding challenges from **LeetCode**, **HackerRank**, **Codeforces**, and **custom problems**.  
 This repository highlights consistency, growth, and problem‑solving skills with a strong focus on **custom practice sets** to deepen understanding of algorithms and data structures.
 
@@ -38,18 +40,7 @@ coding-challenges/
     └── thought-process.md
 ```
 
----
 
-## 📊 Stats & Badges
-
-![Problems Solved](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Yoni-Berihun/coding-challenges/main/.github/stats/problems.json&style=for-the-badge)
-
-![Languages](https://img.shields.io/github/languages/top/Yoni-Berihun/coding-challenges?style=for-the-badge)
-![Languages Count](https://img.shields.io/github/languages/count/Yoni-Berihun/coding-challenges?style=for-the-badge)
-![Commit Activity](https://img.shields.io/github/commit-activity/w/Yoni-Berihun/coding-challenges?style=for-the-badge)
-![Last Commit](https://img.shields.io/github/last-commit/Yoni-Berihun/coding-challenges?style=for-the-badge)
-
----
 
 ## 🎯 Goals
 - Solve problems consistently across platforms and custom sets.  
@@ -90,8 +81,3 @@ coding-challenges/
 - This repo is both a **learning journal** and a **portfolio of problem‑solving skills**.  
 ```
 
----
-
-
-
-👉 Would you like me to also generate a **GitHub profile README snippet with badges** (so recruiters see your stats right on your profile page, not just inside the repo)?
