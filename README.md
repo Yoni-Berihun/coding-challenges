@@ -43,6 +43,7 @@ coding-challenges/
 ## 📊 Stats & Badges
 
 ![Problems Solved](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/Yoni-Berihun/coding-challenges/main/.github/stats/problems.json&style=for-the-badge)
+
 ![Languages](https://img.shields.io/github/languages/top/Yoni-Berihun/coding-challenges?style=for-the-badge)
 ![Languages Count](https://img.shields.io/github/languages/count/Yoni-Berihun/coding-challenges?style=for-the-badge)
 ![Commit Activity](https://img.shields.io/github/commit-activity/w/Yoni-Berihun/coding-challenges?style=for-the-badge)
