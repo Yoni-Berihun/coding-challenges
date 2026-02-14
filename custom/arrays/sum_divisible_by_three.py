@@ -5,3 +5,24 @@
 # If the sum of the integers is divisible by 3, return the maximum value in the array.
 
 # Otherwise, return the minimum value in the array.
+#  Input:
+# n = 5
+# arr = [3, 6, 9, 2, 1]
+
+# Sum = 3 + 6 + 9 + 2 + 1 = 21 (divisible by 3)
+
+# Output:
+# 9
+# Explanation:
+# Sum is divisible by 3 → return maximum value in the array → 9
+ 
+#  Input:
+# n = 4
+# arr = [4, 5, 7, 2]
+
+# Sum = 4 + 5 + 7 + 2 = 18 (divisible by 3)
+
+# Output:
+# 7
+# Explanation:
+# Sum is divisible by 3 → return maximum value → 7
