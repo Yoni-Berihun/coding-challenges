@@ -26,3 +26,17 @@
 # 7
 # Explanation:
 # Sum is divisible by 3 → return maximum value → 7
+def function(n , arr):
+    max=0
+    i=0
+    for num in arr:
+        if num >= arr[i]:
+            max=num
+            return max
+        else:
+            i+1
+
+arr = [4, 5, 7, 2]
+n = arr.__len__
+x=function(n, arr)
+print(x)
