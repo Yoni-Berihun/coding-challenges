@@ -27,14 +27,18 @@
 # Explanation:
 # Sum is divisible by 3 → return maximum value → 7
 def function(n , arr):
-    max=0
-    i=0
+    maximum= max(arr)
+    print("max", maximum)
+    minimum = min(arr)
+    print("min", minimum)
+    total=0
     for num in arr:
-        if num >= arr[i]:
-            max=num
-            return max
-        else:
-            i+1
+       total += num
+       if total % 3 == 0:
+           return maximum
+       else:
+           return minimum
+             
 
 arr = [4, 5, 7, 2]
 n = arr.__len__
