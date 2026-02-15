@@ -8,6 +8,7 @@ This document tracks my progress, learnings, and time spent on array-based codin
 | Feb 13, 2026 | [Product Parity](../custom/arrays/product_parity.py) | ~2 hours | Initialization, Loops, Indentation |
 | Feb 14, 2026 | [Sum Divisible By Three](../custom/arrays/sum_divisible_by_three.py) | 1h 20m | Basic DS, Iteration, Loops |
 | Feb 15, 2026 | [Positive Negative Count](../custom/arrays/positive_negative_count.py) | ~40 mins | Control Flow, Conditionals |
+| Feb 15, 2026 | [Even Odd Analysis](../custom/arrays/even_odd_analysis.py) | ~30 mins | Counting + Summing, Nested Conditionals, Decision Logic |
 
 ---
 
@@ -56,5 +57,25 @@ This document tracks my progress, learnings, and time spent on array-based codin
     - Utilized `max()` and `min()` functions effectively to find extremes in the array.
 3.  **Logic Implementation**:
     - Successfully implemented logic to compare counts and return different results based on the comparison.
+
+### 4. Even Odd Analysis
+**File:** `custom/arrays/even_odd_analysis.py`
+**Date:** February 15, 2026
+**Time Spent:** ~30 mins
+
+**Key Learnings:**
+1.  **Two-Phase Pattern (Aggregate → Decide)**:
+    - Phase 1: compute facts in a single loop (even/odd counts + sums).
+    - Phase 2: apply rules with a clean decision tree.
+2.  **Nested Conditionals (but keep them readable)**:
+    - If branches are mutually exclusive, prefer `if / elif / else` instead of multiple `if` statements.
+3.  **Simplifying “equal counts” logic**:
+    - When counts are equal, the answer is just the absolute difference between sums:
+      - `abs(sum_even - sum_odd)`
+4.  **Refactor idea (same logic, cleaner)**:
+    - Keep the computation the same, but the return logic can be compact:
+      - If `even_count > odd_count`: return `sum_even`
+      - Else if `odd_count > even_count`: return `sum_odd`
+      - Else: return `abs(sum_even - sum_odd)`
 
 *Note: Debugging simple syntax errors is part of the process!*
