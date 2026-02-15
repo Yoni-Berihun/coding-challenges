@@ -56,3 +56,31 @@
 
 # Output:
 # 26
+def function(arr):
+    evencount = 0
+    oddcount = 0
+    sumofeven = 0
+    sumofodd = 0
+    
+    for num in arr:
+        if num % 2 == 0:
+            evencount += 1
+            sumofeven += num
+        else:
+            oddcount += 1
+            sumofodd += num
+    if evencount > oddcount:
+        return sumofeven
+    if oddcount >evencount:
+        return sumofodd
+    else:
+        if sumofeven > sumofodd:
+            return sumofeven - sumofodd
+        else:
+            return sumofodd - sumofeven
+        
+
+arr = [2, 4, 6, 1, 3, 5]
+
+x = function(arr)
+print(x)
