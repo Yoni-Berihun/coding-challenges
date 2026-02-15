@@ -19,3 +19,17 @@
 # Output:
 # -6
 
+def function(arr):
+    maximumnumber = 0
+    minimumnumber = 0
+    
+    positivecount = 0
+    negativecount = 0
+    
+    for num in arr:
+        if num > 0:
+            positivecount += 1
+        else:
+            nagativecount
+    
+
