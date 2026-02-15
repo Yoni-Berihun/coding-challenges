@@ -20,8 +20,8 @@
 # -6
 
 def function(arr):
-    maximumnumber = 0
-    minimumnumber = 0
+    maximumnumber = max(arr)
+    minimumnumber = min(arr)
     
     positivecount = 0
     negativecount = 0
@@ -30,13 +30,16 @@ def function(arr):
         if num > 0:
             positivecount += 1
         else:
-            nagativecount += 1
+            negativecount += 1
     if positivecount > negativecount:
         return maximumnumber
     else:
         return minimumnumber
     
     
+arr = [-1, 2, 3, -4, 5, -6]
 
+x = function(arr)
+print(x)
     
 
