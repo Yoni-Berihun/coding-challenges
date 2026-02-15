@@ -7,6 +7,7 @@ This document tracks my progress, learnings, and time spent on array-based codin
 |---|---|---|---|
 | Feb 13, 2026 | [Product Parity](../custom/arrays/product_parity.py) | ~2 hours | Initialization, Loops, Indentation |
 | Feb 14, 2026 | [Sum Divisible By Three](../custom/arrays/sum_divisible_by_three.py) | 1h 20m | Basic DS, Iteration, Loops |
+| Feb 15, 2026 | [Positive Negative Count](../custom/arrays/positive_negative_count.py) | ~40 mins | Control Flow, Conditionals |
 
 ---
 
@@ -41,5 +42,19 @@ This document tracks my progress, learnings, and time spent on array-based codin
 3.  **Troubleshooting**: 
     - **Indentation (Again)**: Encountered challenges with Python's indentation rules, specifically when nesting logic inside loops.
     - **Task Execution**: Learned to distinguish between actions that happen *during* the loop versus *after* the loop completes.
+
+### 3. Positive Negative Count
+**File:** `custom/arrays/positive_negative_count.py`
+**Date:** February 15, 2026
+**Time Spent:** ~40 mins
+
+**Key Learnings:**
+1.  **Control Flow**:
+    - Gained a solid understanding of how `if` and `else` statements work within loops.
+    - Used conditional logic to categorize numbers (positive vs negative).
+2.  **Built-in Functions**:
+    - Utilized `max()` and `min()` functions effectively to find extremes in the array.
+3.  **Logic Implementation**:
+    - Successfully implemented logic to compare counts and return different results based on the comparison.
 
 *Note: Debugging simple syntax errors is part of the process!*
