@@ -30,6 +30,13 @@ def function(arr):
         if num > 0:
             positivecount += 1
         else:
-            nagativecount
+            nagativecount += 1
+    if positivecount > negativecount:
+        return maximumnumber
+    else:
+        return minimumnumber
+    
+    
+
     
 
