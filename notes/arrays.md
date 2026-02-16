@@ -9,6 +9,7 @@ This document tracks my progress, learnings, and time spent on array-based codin
 | Feb 14, 2026 | [Sum Divisible By Three](../custom/arrays/sum_divisible_by_three.py) | 1h 20m | Basic DS, Iteration, Loops |
 | Feb 15, 2026 | [Positive Negative Count](../custom/arrays/positive_negative_count.py) | ~40 mins | Control Flow, Conditionals |
 | Feb 15, 2026 | [Even Odd Analysis](../custom/arrays/even_odd_analysis.py) | ~30 mins | Counting + Summing, Nested Conditionals, Decision Logic |
+| Feb 16, 2026 | [Maximum Circular Subarray Sum](../custom/arrays/maximum_circular_subarray_sum.py) | ~3 hours (in progress) | Kadane’s Algorithm, Circular Arrays, Edge Cases |
 
 ---
 
@@ -79,3 +80,60 @@ This document tracks my progress, learnings, and time spent on array-based codin
       - Else: return `abs(sum_even - sum_odd)`
 
 *Note: Debugging simple syntax errors is part of the process!*
+
+### 5. Maximum Circular Subarray Sum (in progress)
+**File:** `custom/arrays/maximum_circular_subarray_sum.py`
+**Date:** February 16, 2026
+**Time Spent:** ~3 hours (so far)
+
+**Key Learnings / Findings so far:**
+1. **Kadane’s algorithm is the core building block** for finding the max sum over any contiguous subarray.
+2. **Circular trick idea** (still working through it):
+    - Best circular sum often equals `total_sum - (minimum subarray sum)`.
+3. **Important edge case**:
+    - If all numbers are negative, the answer is the maximum (least negative) single element (and the circular trick can give 0, which would be wrong).
+
+---
+
+## Kadane’s Algorithm (Max Subarray Sum) — finding for Circular Subarray
+
+This is a reference flowchart for the **standard (non-circular) Kadane’s algorithm** step that I’m using while working on the *Maximum Circular Subarray Sum* question.
+
+```mermaid
+flowchart TD
+    A[Start] --> B[Initialize: 
+        maxSoFar = -∞ 
+        maxEndingHere = 0 
+        start=0, end=0, s=0]
+
+    B --> C[For each element arr[i]]
+    C --> D[Add arr[i] to maxEndingHere]
+
+    D --> E{Is maxEndingHere > maxSoFar?}
+    E -->|Yes| F[Update maxSoFar = maxEndingHere
+                 start = s, end = i]
+    E -->|No| G[Do nothing]
+
+    F --> H{Is maxEndingHere < 0?}
+    G --> H
+
+    H -->|Yes| I[Reset: 
+                 maxEndingHere = 0 
+                 s = i+1]
+    H -->|No| J[Continue]
+
+    I --> C
+    J --> C
+
+    C --> K[End of loop]
+    K --> L[Result: 
+             maxSoFar = maximum subarray sum 
+             Subarray = arr[start...end]]
+
+    %% Edge case notes
+    L --> M[Edge Cases:
+             • Full array if sum never < 0
+             • Exclude elements if they weaken sum
+             • All negatives → least negative element
+             • Multiple equal sums → first chosen]
+```
