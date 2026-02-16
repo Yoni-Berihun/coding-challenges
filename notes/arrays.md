@@ -9,7 +9,7 @@ This document tracks my progress, learnings, and time spent on array-based codin
 | Feb 14, 2026 | [Sum Divisible By Three](../custom/arrays/sum_divisible_by_three.py) | 1h 20m | Basic DS, Iteration, Loops |
 | Feb 15, 2026 | [Positive Negative Count](../custom/arrays/positive_negative_count.py) | ~40 mins | Control Flow, Conditionals |
 | Feb 15, 2026 | [Even Odd Analysis](../custom/arrays/even_odd_analysis.py) | ~30 mins | Counting + Summing, Nested Conditionals, Decision Logic |
-| Feb 16, 2026 | [Maximum Circular Subarray Sum](../custom/arrays/maximum_circular_subarray_sum.py) | ~3 hours (in progress) | Kadane’s Algorithm, Circular Arrays, Edge Cases |
+| Feb 16, 2026 | [Maximum Circular Subarray Sum](../custom/arrays/maximum_circular_subarray_sum.py) | ~4 hours (in progress) | Kadane’s Algorithm, Circular Arrays, Edge Cases |
 
 ---
 
@@ -84,7 +84,7 @@ This document tracks my progress, learnings, and time spent on array-based codin
 ### 5. Maximum Circular Subarray Sum (in progress)
 **File:** `custom/arrays/maximum_circular_subarray_sum.py`
 **Date:** February 16, 2026
-**Time Spent:** ~3 hours (so far)
+**Time Spent:** ~4 hours (so far)
 
 **Key Learnings / Findings so far:**
 1. **Kadane’s algorithm is the core building block** for finding the max sum over any contiguous subarray.
@@ -95,45 +95,66 @@ This document tracks my progress, learnings, and time spent on array-based codin
 
 ---
 
-## Kadane’s Algorithm (Max Subarray Sum) — finding for Circular Subarray
+## Kadane’s Algorithm (Max Subarray Sum) — Theory Only
 
-This is a reference flowchart for the **standard (non-circular) Kadane’s algorithm** step that I’m using while working on the *Maximum Circular Subarray Sum* question.
+Core idea (non-circular):
+- Track two values while scanning left to right:
+    - `maxEndingHere`: best sum ending at current index → `max(arr[i], maxEndingHere + arr[i])`.
+    - `maxSoFar`: global best so far → `max(maxSoFar, maxEndingHere)`.
+- Complexity: O(n) time, O(1) space.
 
-```mermaid
-flowchart TD
-    A[Start] --> B[Initialize: 
-        maxSoFar = -∞ 
-        maxEndingHere = 0 
-        start=0, end=0, s=0]
+Circular variant (wrap-around allowed):
+- Let `maxNormal` be the standard Kadane result.
+- Let `total` be the sum of all elements.
+- Let `minSubarray` be the minimum contiguous subarray sum (compute via Kadane on inverted values or by tracking minimum instead of maximum).
+- Candidate circular sum is `total - minSubarray` (this picks a prefix and suffix by excluding the worst middle segment).
+- Final answer: $
+    	ext{maxCircular} = \begin{cases}
+        \max(\text{maxNormal}, \; \text{total} - \text{minSubarray}) & \text{if } \text{maxNormal} \ge 0 \\
+        	ext{maxNormal} & \text{if all elements are negative}
+    \end{cases}
+    $
 
-    B --> C[For each element arr[i]]
-    C --> D[Add arr[i] to maxEndingHere]
+Practical notes:
+- If all numbers are negative, `total - minSubarray` becomes 0; ignore it and return `maxNormal` (the least negative element).
+- When multiple subarrays tie, any one is acceptable unless the problem specifies otherwise.
 
-    D --> E{Is maxEndingHere > maxSoFar?}
-    E -->|Yes| F[Update maxSoFar = maxEndingHere
-                 start = s, end = i]
-    E -->|No| G[Do nothing]
+### Python (reference implementation)
 
-    F --> H{Is maxEndingHere < 0?}
-    G --> H
+```python
+from typing import List
 
-    H -->|Yes| I[Reset: 
-                 maxEndingHere = 0 
-                 s = i+1]
-    H -->|No| J[Continue]
+def kadane_max(arr: List[int]) -> int:
+    """Standard Kadane's algorithm: maximum subarray sum."""
+    max_ending = arr[0]
+    max_so_far = arr[0]
+    for x in arr[1:]:
+        max_ending = max(x, max_ending + x)
+        max_so_far = max(max_so_far, max_ending)
+    return max_so_far
 
-    I --> C
-    J --> C
+def kadane_min(arr: List[int]) -> int:
+    """Minimum subarray sum using Kadane-like traversal."""
+    min_ending = arr[0]
+    min_so_far = arr[0]
+    for x in arr[1:]:
+        min_ending = min(x, min_ending + x)
+        min_so_far = min(min_so_far, min_ending)
+    return min_so_far
 
-    C --> K[End of loop]
-    K --> L[Result: 
-             maxSoFar = maximum subarray sum 
-             Subarray = arr[start...end]]
-
-    %% Edge case notes
-    L --> M[Edge Cases:
-             • Full array if sum never < 0
-             • Exclude elements if they weaken sum
-             • All negatives → least negative element
-             • Multiple equal sums → first chosen]
+def max_circular_subarray_sum(arr: List[int]) -> int:
+    """
+    Maximum subarray sum allowing wrap-around.
+    - If all numbers are negative, returns the largest (least negative) element.
+    - Otherwise, compares normal Kadane vs circular candidate (total - minSubarray).
+    """
+    if not arr:
+        return 0
+    max_normal = kadane_max(arr)
+    if max_normal < 0:
+        return max_normal
+    total = sum(arr)
+    min_sub = kadane_min(arr)
+    return max(max_normal, total - min_sub)
 ```
+
