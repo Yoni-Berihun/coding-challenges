@@ -46,3 +46,21 @@
 # Explanation:
 # The maximum subarray sum is just the least negative 
 # number, which is -1.
+
+#we will use kadane's algortm here:
+# The problem: Find the contiguous subarray
+# (a continuous slice of the array) that has
+# the largest possible sum.
+
+# The idea:
+
+# Keep a running sum (maxEndingHere) as you move through the array.
+
+# If this running sum ever becomes negative, reset 
+# it to 0 — because carrying a negative sum forward 
+# will only hurt future totals.
+
+# Keep track of the best sum you’ve seen so far (maxSoFar).
+
+# The result: At the end, maxSoFar holds the 
+# maximum subarray sum.
