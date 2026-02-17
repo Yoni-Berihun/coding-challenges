@@ -64,3 +64,34 @@
 
 # The result: At the end, maxSoFar holds the 
 # maximum subarray sum.
+
+
+def maxSubArray(arr):
+    current_sum = 0
+    max_sum = arr[0]
+
+    start = 0
+    end = 0
+    temp_start = 0
+
+    for i in range(len(arr)):
+        current_sum += arr[i]
+
+        # Found better subarray
+        if current_sum > max_sum:
+            max_sum = current_sum
+            start = temp_start
+            end = i
+
+        # Reset if current_sum becomes negative
+        if current_sum < 0:
+            current_sum = 0
+            temp_start = i + 1
+
+    print("Maximum Sum:", max_sum)
+    print("Subarray:", arr[start:end+1])
+
+arr = [8, -1, 3, 4, -2]
+
+x= maxSubArray(arr)
+print(x)
