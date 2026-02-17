@@ -66,32 +66,61 @@
 # maximum subarray sum.
 
 
-def maxSubArray(arr):
-    current_sum = 0
+def maxCircularSubarray(arr):
+    n = len(arr)
+    
+    # --- 1. Normal Kadane (max subarray) ---
     max_sum = arr[0]
+    current_sum = 0
+    start = end = temp_start = 0
 
-    start = 0
-    end = 0
-    temp_start = 0
-
-    for i in range(len(arr)):
+    for i in range(n):
         current_sum += arr[i]
 
-        # Found better subarray
         if current_sum > max_sum:
             max_sum = current_sum
             start = temp_start
             end = i
 
-        # Reset if current_sum becomes negative
         if current_sum < 0:
             current_sum = 0
             temp_start = i + 1
 
-    print("Maximum Sum:", max_sum)
-    print("Subarray:", arr[start:end+1])
+    normal_subarray = arr[start:end+1]
+
+    # --- 2. Find minimum subarray (for circular case) ---
+    min_sum = arr[0]
+    current_min = 0
+    start_min = end_min = temp_start_min = 0
+
+    for i in range(n):
+        current_min += arr[i]
+
+        if current_min < min_sum:
+            min_sum = current_min
+            start_min = temp_start_min
+            end_min = i
+
+        if current_min > 0:
+            current_min = 0
+            temp_start_min = i + 1
+
+    total_sum = sum(arr)
+    circular_max_sum = total_sum - min_sum
+
+    # --- 3. Handle all-negative array ---
+    if max_sum < 0:
+        return max_sum, normal_subarray
+
+    # --- 4. Decide which is better ---
+    if circular_max_sum > max_sum:
+        # Circular subarray elements: outside the min subarray
+        circular_subarray = arr[end_min+1:] + arr[:start_min]
+        return circular_max_sum, circular_subarray
+    else:
+        return max_sum, normal_subarray
 
 arr = [8, -1, 3, 4, -2]
-
-x= maxSubArray(arr)
-print(x)
+max_sum, subarr = maxCircularSubarray(arr)
+print("Maximum Sum:", max_sum)
+print("Subarray:", subarr)
