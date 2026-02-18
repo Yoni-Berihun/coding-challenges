@@ -9,7 +9,7 @@ This document tracks my progress, learnings, and time spent on array-based codin
 | Feb 14, 2026 | [Sum Divisible By Three](../custom/arrays/sum_divisible_by_three.py) | 1h 20m | Basic DS, Iteration, Loops |
 | Feb 15, 2026 | [Positive Negative Count](../custom/arrays/positive_negative_count.py) | ~40 mins | Control Flow, Conditionals |
 | Feb 15, 2026 | [Even Odd Analysis](../custom/arrays/even_odd_analysis.py) | ~30 mins | Counting + Summing, Nested Conditionals, Decision Logic |
-| Feb 16, 2026 | [Maximum Circular Subarray Sum](../custom/arrays/maximum_circular_subarray_sum.py) | ~4 hours (in progress) | Kadane’s Algorithm, Circular Arrays, Edge Cases |
+| Feb 16, 2026 | [Maximum Circular Subarray Sum](../custom/arrays/maximum_circular_subarray_sum.py) | ~8 hours | Kadane’s Algorithm, Circular Arrays, Edge Cases, Needs Reinforcement |
 | Feb 18, 2026 | [Repeated Max Element](../custom/arrays/repeated_max_element.py) | 10 mins | Max + Count, Frequency |
 
 ---
@@ -82,12 +82,13 @@ This document tracks my progress, learnings, and time spent on array-based codin
 
 *Note: Debugging simple syntax errors is part of the process!*
 
-### 5. Maximum Circular Subarray Sum (in progress)
+### 5. Maximum Circular Subarray Sum
 **File:** `custom/arrays/maximum_circular_subarray_sum.py`
 **Date:** February 16, 2026
-**Time Spent:** ~4 hours (so far)
+**Time Spent:** ~8 hours (total)
+**Status:** Needs reinforcement
 
-**Key Learnings / Findings so far:**
+**Key Learnings:**
 1. **Kadane’s algorithm is the core building block** for finding the max sum over any contiguous subarray.
 2. **Circular trick idea** (still working through it):
     - Best circular sum often equals `total_sum - (minimum subarray sum)`.
