@@ -38,13 +38,18 @@
 
 # Output:
 # 7
-arr = [1, 3, 5, 5, 2]
-z= max(arr)
-print(z)
+
+
 def function(arr):
     count = 0
+    maximum = max(arr)
     for num in arr:
-        if num == max(arr):
+        if num == maximum:
             count+=1
     if count > 1:
-        print max(arr)
+        print( max(arr))
+    else:
+        print(-1)
+    
+arr = [7, 7, 7]
+function(arr)
