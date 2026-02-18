@@ -41,3 +41,9 @@
 arr = [1, 3, 5, 5, 2]
 z= max(arr)
 print(z)
+def function(arr):
+    count = 0
+    for num in arr:
+        if num == max(arr):
+            count+=1
+    if count 
