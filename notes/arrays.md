@@ -10,6 +10,7 @@ This document tracks my progress, learnings, and time spent on array-based codin
 | Feb 15, 2026 | [Positive Negative Count](../custom/arrays/positive_negative_count.py) | ~40 mins | Control Flow, Conditionals |
 | Feb 15, 2026 | [Even Odd Analysis](../custom/arrays/even_odd_analysis.py) | ~30 mins | Counting + Summing, Nested Conditionals, Decision Logic |
 | Feb 16, 2026 | [Maximum Circular Subarray Sum](../custom/arrays/maximum_circular_subarray_sum.py) | ~4 hours (in progress) | Kadane’s Algorithm, Circular Arrays, Edge Cases |
+| Feb 18, 2026 | [Repeated Max Element](../custom/arrays/repeated_max_element.py) | 10 mins | Max + Count, Frequency |
 
 ---
 
@@ -157,4 +158,14 @@ def max_circular_subarray_sum(arr: List[int]) -> int:
     min_sub = kadane_min(arr)
     return max(max_normal, total - min_sub)
 ```
+
+### 6. Repeated Max Element
+**File:** `custom/arrays/repeated_max_element.py`
+**Date:** February 18, 2026
+**Time Spent:** 10 minutes
+
+**Problem:** Given an integer array, find the largest element and count its occurrences. If it appears more than once, return the element; otherwise, return -1.
+**Notes:**
+- Single linear scan for counting; overall O(n) time, O(1) extra space.
+- Handles empty arrays explicitly; original script printed results, this version returns a value for reuse.
 
