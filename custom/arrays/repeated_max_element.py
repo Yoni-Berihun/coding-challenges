@@ -46,4 +46,5 @@ def function(arr):
     for num in arr:
         if num == max(arr):
             count+=1
-    if count 
+    if count > 1:
+        print max(arr)
