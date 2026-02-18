@@ -38,3 +38,6 @@
 
 # Output:
 # 7
+arr = [1, 3, 5, 5, 2]
+z= max(arr)
+print(z)
