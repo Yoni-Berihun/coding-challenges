@@ -9,7 +9,7 @@
 
 # “Distinct” means different values, not positions.
 
-# 📌 Examples
+# 📌   Examples
 # Example 1
 # Input:
 # arr = [4, 1, 3, 4, 2]
