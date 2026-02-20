@@ -50,3 +50,14 @@
 # Loop through the array
 
 # Update them carefully when you see a number
+def function (arr):
+    largest = arr[0]
+    second_largest = arr[0]
+    
+    for num in arr:
+        if num >= largest:
+            second_largest = largest
+            largest = num
+            
+    if second_largest > 0:
+        return 
