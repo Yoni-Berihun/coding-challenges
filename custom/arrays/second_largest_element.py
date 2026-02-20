@@ -56,14 +56,17 @@ def function (arr):
     
     for num in arr:
         if num > largest:
-            second_largest = largest
             largest = num
-            
-    if second_largest > 0:
-        return second_largest
-    else:
-        return -1
-    
-arr = [10, 8]
+        
+        if num < largest and num > arr:
+            num  = second_largest 
+            return second_largest
+        else:
+            return -1
+
+
+
+   
+arr = [4, 1, 3, 4, 2]
 x= function(arr)
 print(x)
