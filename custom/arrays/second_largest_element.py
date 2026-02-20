@@ -55,7 +55,7 @@ def function (arr):
     second_largest = arr[0]
     
     for num in arr:
-        if num >= largest:
+        if num > largest:
             second_largest = largest
             largest = num
             
