@@ -60,4 +60,10 @@ def function (arr):
             largest = num
             
     if second_largest > 0:
-        return 
+        return second_largest
+    else:
+        return -1
+    
+arr = [10, 8]
+x= function(arr)
+print(x)
